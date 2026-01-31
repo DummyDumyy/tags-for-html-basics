@@ -23,7 +23,7 @@
         }
 
         table {
-            margin: auto;
+            margin: 50;
             width: 90%;
             border-collapse: collapse;
             background-color: #2b2b2b;
@@ -76,6 +76,28 @@
             font-family: monospace;
             font-style: normal;
         }
+        
+        /* Code box */
+        .code {
+            white-space: pre;
+            font-family: monospace;
+            font-style: normal;
+            color: #eaeaea;
+            line-height: 1.5;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        /* Orange box header */
+        .orange-header {
+            background-color: #ff9f43;
+            color: #000;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
     </style>
 </head>
 
@@ -177,7 +199,17 @@
         <td><span class="attr">cellspacing</span>=<span class="value">"szám"</span></td>
         <td>Cella bal–jobb margó (table-ben).</td>
     </tr>
-
+    <tr>
+    <td>
+            <span class="tag">&lt;td</span>
+            <span class="attr">colspan</span>=<span class="value">"szám"</span>
+            <span class="tag">&gt;</span>
+    </td>
+    <td>
+            Megadja hogy ez az egy cella mennyi cellányi helyet vesz fel,
+            2, ha 2 cellát egyesíteni akarunk
+        </td>
+    </tr>
     <tr class="section">
         <td colspan="2">Extrák</td>
     </tr>
@@ -207,6 +239,77 @@
         <td>Linkké alakít egy szöveget.</td>
     </tr>
 </table>
-
+<table style="width: 80%;">
+    <tr>
+        <td class="orange-header">&lt;&gt;</td>
+    </tr>
+    <tr>
+        <td>
+            <div class="code">
+<span class="tag">&lt;html&gt;</span>
+ <span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;title&gt;</span> Oldal Cím <span class="tag">&lt;/title&gt;</span>
+ <span class="tag">&lt;/head&gt;</span>
+ <span class="tag">&lt;body</span>
+  <span class="attr">bgcolor</span>=<span class="value">"#717171"</span>
+  <span class="attr">alink</span>=<span class="value">"#ffffff"</span>
+  <span class="attr">vlink</span>=<span class="value">"#ffffff"</span>
+ <span class="tag">&gt;</span>
+  <span class="tag">&lt;font</span> <span class="attr">color</span>=<span class="value">"black"</span><span class="tag">&gt;</span>
+   <span class="tag">&lt;table</span>
+    <span class="attr">bgcolor</span>=<span class="value">"#1e1e1e"</span>
+    <span class="attr">align</span>=<span class="value">"center"</span>
+    <span class="attr">cellpadding</span>=<span class="value">"10"</span>
+    <span class="attr">cellspacing</span>=<span class="value">"10"</span>
+   <span class="tag">&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+     <span class="tag">&lt;td&gt;</span>
+      <span class="tag">&lt;table</span>
+       <span class="attr">bgcolor</span>=<span class="value">"#c0ff33"</span>
+       <span class="attr">align</span>=<span class="value">"center"</span>
+      <span class="tag">&gt;</span>
+       <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;td&gt;</span>
+         <span class="tag">&lt;img</span>
+          <span class="attr">src</span>=<span class="value">"<span class="underline">random_kep.png</span>"</span>
+         <span class="tag">&gt;</span>
+        <span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;td&gt;</span>
+         <span class="tag">&lt;center&gt;</span>
+          <span class="tag">&lt;h1&gt;</span> Random cím ami középött van <span class="tag">&lt;/h1&gt;</span>
+         <span class="tag">&lt;/center&gt;</span>
+        <span class="tag">&lt;/td&gt;</span>
+       <span class="tag">&lt;/tr&gt;</span>
+       <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;td</span> <span class="attr">colspan</span>=<span class="value">"2"</span><span class="tag">&gt;</span>
+         <span class="tag">&lt;h2&gt;</span> Még egy cím <span class="tag">&lt;/h2&gt;</span>
+         <span class="tag">&lt;center&gt;</span>
+          <span class="tag">&lt;img</span>
+           <span class="attr">src</span>=<span class="value">"<span class="underline">random_kozeputt_kep.jpeg</span>"</span>
+          <span class="tag">&gt;</span>
+         <span class="tag">&lt;/center&gt;</span>
+         <span class="tag">&lt;p&gt;</span>
+          Ide megy egy csomó szöveg ~~~~~
+         <span class="tag">&lt;/p&gt;</span>
+         <span class="tag">&lt;ul&gt;</span>
+          <span class="tag">&lt;li&gt;</span> ide egy listapont <span class="tag">&lt;/li&gt;</span>
+          <span class="tag">&lt;li&gt;</span> mégegy listapont <span class="tag">&lt;/li&gt;</span>
+          <span class="tag">&lt;li&gt;</span> oké ez az utolsó <span class="tag">&lt;/li&gt;</span>
+          <span class="tag">&lt;li&gt;</span> nah még egy mert a dogába is 5 volt<span class="tag">&lt;/li&gt;</span>
+          <span class="tag">&lt;li&gt;</span> okés uccsó <span class="tag">&lt;/li&gt;</span>
+         <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/td&gt;</span>
+       <span class="tag">&lt;/tr&gt;</span>
+      <span class="tag">&lt;/table&gt;</span>
+     <span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+   <span class="tag">&lt;/table&gt;</span>
+  <span class="tag">&lt;/font&gt;</span>
+ <span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+</div>
+</td>
+</tr>
+</table>
 </body>
 </html>
